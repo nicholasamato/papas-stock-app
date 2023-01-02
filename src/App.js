@@ -36,7 +36,7 @@ function App() {
     return(
     <div>
         <div className="banner">
-            <h1>Papa's Stock App</h1>
+            <h1>💰 $$$ Papa's Stock App $$$ 😀</h1>
         </div>
         <div className="dashcontainer">
             <div className="dash">

@@ -44,6 +44,13 @@ thead{
     -webkit-box-shadow: 0px 0px 17px 4px rgba(0,0,0,0.22); 
     box-shadow: 0px 0px 17px 4px rgba(0,0,0,0.22);
 } */
+h1{
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 17px 4px rgba(0,0,0,0.45); 
+    box-shadow: 0px 0px 17px 4px rgba(0,0,0,0.45);
+}
 button,label{
     font-family: "Comic Sans MS", sans-serif;
     padding: 2px;
