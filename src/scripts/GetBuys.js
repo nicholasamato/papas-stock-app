@@ -1,5 +1,5 @@
 function GetBuys(objects, shares, date){
-    const size = Object.keys(objects).length;
+    const size = objects.length;
     let [index,count, buycount, currentspend, sharecount, marketstart, buylist] = [2,1,0,0,0,objects[size-1].price,{}];
     //^Instantiate intial variables
     const arr = [objects[size-1].date + "| @ |" + String(objects[size-1].price) + "|Indicator|" + String(index)];

@@ -1,19 +1,18 @@
 import axios from 'axios';
 
-function mapload(objects){
-  let map = {} // instantiate an empty map of objects
-  let count = 0;
+function arrayload(objects){
+  let arr = [] // instantiate an empty array to build an array of objects
   for (const key in objects){ //load map with objects of date, prices with key of index to allow for iteration
     const childval = objects[key]["5. adjusted close"];
     const open = objects[key]["1. open"];
-    map[count] = {
+    
+    arr.push({
       price: parseFloat(childval),
       date: key,
       openprice: open
-    }
-    count++;
+    });
   }
-  return(map);
+  return(arr);
 }
 async function fetchStockData(ticker, apikey){
   const response = await axios.get( 
@@ -21,7 +20,7 @@ async function fetchStockData(ticker, apikey){
   ); //Fetch stock data from Alpha Vantage API
   
   const objs = response.data["Time Series (Daily)"]; //Get data output from daily time series function
-  return(mapload(objs));
+  return(arrayload(objs));
 }
 
 export default fetchStockData;
