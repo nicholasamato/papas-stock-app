@@ -57,7 +57,7 @@ function GetBuys(objects, shares, date){
                     reset(); // reset papas indicator and repeat count
                 }
                 else{
-                    buildstring += "|  |";//Add 
+                    buildstring += "|  |";//Add empty instruction
                 }
             }
         }
