@@ -9,6 +9,9 @@ table{
     margin-top: 50px;
 }
 
+td,th{
+   font-size: 2vw;
+}
 .banner{
     background-color: #0062e7;
     padding: 10px;
