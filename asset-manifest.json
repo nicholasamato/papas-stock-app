@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/papas-stock-app/static/css/main.a4f8dcaa.css",
-    "main.js": "/papas-stock-app/static/js/main.64a8f431.js",
+    "main.css": "/papas-stock-app/static/css/main.9d50565b.css",
+    "main.js": "/papas-stock-app/static/js/main.998c9fb2.js",
     "index.html": "/papas-stock-app/index.html",
-    "main.a4f8dcaa.css.map": "/papas-stock-app/static/css/main.a4f8dcaa.css.map",
-    "main.64a8f431.js.map": "/papas-stock-app/static/js/main.64a8f431.js.map"
+    "main.9d50565b.css.map": "/papas-stock-app/static/css/main.9d50565b.css.map",
+    "main.998c9fb2.js.map": "/papas-stock-app/static/js/main.998c9fb2.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4f8dcaa.css",
-    "static/js/main.64a8f431.js"
+    "static/css/main.9d50565b.css",
+    "static/js/main.998c9fb2.js"
   ]
 }
