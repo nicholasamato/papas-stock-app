@@ -14,9 +14,9 @@ function arrayload(objects){
   }
   return(arr);
 }
-async function fetchStockData(ticker, apikey){
+async function fetchStockData(ticker, k){
   const response = await axios.get( 
-    `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${ticker}&outputsize=full&apikey=${apikey}`
+    `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${ticker}&outputsize=full&apikey=${k}`
   ); //Fetch stock data from Alpha Vantage API
   
   const objs = response.data["Time Series (Daily)"]; //Get data output from daily time series function
