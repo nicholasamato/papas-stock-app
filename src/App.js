@@ -11,24 +11,22 @@ function App() {
 
     const k = '3HVXR1R9TOQEYCE6';
 
-    const [val, setVal] = useState('');
     const [objects, setObjects] = useState([]);
-    const [val2, setVal2] = useState('');
     const [startDate, setStartDate] = useState(new Date('1999-01-01'));
 
     const handleSubmit = async(event) =>{
         event.preventDefault();
-        const response = await fetchStockData(val, k);
-        const buys = GetBuys(response, parseInt(val2), startDate);
+        let symbolinput = document.getElementById('symbolinput').value;
+        let sharesinput = document.getElementById('sharesinput').value;
+        const response = await fetchStockData(symbolinput, k);
+        if(isNaN(sharesinput) || sharesinput < 1){
+            alert("Shares per buy must not be empty or less than 1!")
+            return;
+        }
+        let buys = GetBuys(response, parseInt(sharesinput), startDate);
         setObjects(buys.reverse());
     }
 
-    const handleChange = (event) =>{
-        setVal(event.target.value);
-    }
-    const handleChange2 = (event) =>{
-        setVal2(event.target.value);
-    }
     const handleDateChange = (date) =>{
         setStartDate(date);
     }
@@ -44,14 +42,14 @@ function App() {
                 <div className="labeldiv">
                     <label>Input Stock Symbol</label>
                 </div>
-                <div className="inputdiv">
-                    <input value={val} onChange={handleChange}/>
+                <div  className="inputdiv">
+                    <input id="symbolinput"/>
                 </div>
                 <div className="labeldiv">
                     <label>Input # of shares per buy</label>
                 </div>
                 <div className="inputdiv">
-                    <input value={val2} onChange={handleChange2}/>
+                    <input id="sharesinput"/>
                 </div>
                 <div className="labeldiv">
                     <label>Input Start Date</label>
@@ -66,6 +64,7 @@ function App() {
             </div>
         </div>
         
+        <div className="tablediv">
         <table>
             <thead>
                 <tr >
@@ -86,6 +85,7 @@ function App() {
                 {formattedObjects}
             </tbody>
         </table>
+        </div>
     </div>
     )
 }

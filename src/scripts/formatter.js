@@ -4,7 +4,6 @@ function formatter(stringarr){
     return(stringarr.map((valu, index) =>{
         const [date,price,openprice,indicator,instruction,spend,worth,net,shares,change,worthchange] = valu.split("|");
         //^ Converts string into separate variables that can be read, using array destructuring and string slitting
-        console.log(valu.split("|"));
         return(<Card key={index} 
             date={date} 
             price={price} 

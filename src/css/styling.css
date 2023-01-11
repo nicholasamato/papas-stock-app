@@ -4,6 +4,9 @@ body{
 }
 table{
     text-align: center;
+    margin: auto;
+    background-color:black;
+    margin-top: 50px;
 }
 
 .banner{
