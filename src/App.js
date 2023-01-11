@@ -14,7 +14,7 @@ function App() {
     const [val, setVal] = useState('');
     const [objects, setObjects] = useState([]);
     const [val2, setVal2] = useState('');
-    const [startDate, setStartDate] = useState(new Date());
+    const [startDate, setStartDate] = useState(Date('1999-01-01'));
 
     const handleSubmit = async(event) =>{
         event.preventDefault();
