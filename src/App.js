@@ -9,7 +9,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 function App() {
 
-    const apiKey = '3HVXR1R9TOQEYCE6';
+    const k = '3HVXR1R9TOQEYCE6';
 
     const [val, setVal] = useState('');
     const [objects, setObjects] = useState([]);
@@ -18,7 +18,7 @@ function App() {
 
     const handleSubmit = async(event) =>{
         event.preventDefault();
-        const response = await fetchStockData(val, apiKey);
+        const response = await fetchStockData(val, k);
         const buys = GetBuys(response, parseInt(val2), startDate);
         setObjects(buys.reverse());
     }
