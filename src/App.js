@@ -9,7 +9,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 function App() {
 
-    const k = '3HVXR1R9TOQEYCE6';
+    const k = process.env.local.API;
 
     const [objects, setObjects] = useState([]);
     const [startDate, setStartDate] = useState(new Date('1999-01-01'));
