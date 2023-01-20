@@ -9,7 +9,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 function App() {
 
-    const k = process.env.local.API;
+    const k = process.env.API_KEY;
 
     const [objects, setObjects] = useState([]);
     const [startDate, setStartDate] = useState(new Date('1999-01-01'));
@@ -38,28 +38,23 @@ function App() {
         </div>
         <div className="dashcontainer">
             <div className="dash">
-            <form onSubmit={handleSubmit}>
+            <form className="inputform" onSubmit={handleSubmit}>
                 <div className="labeldiv">
                     <label>Input Stock Symbol</label>
-                </div>
-                <div  className="inputdiv">
                     <input id="symbolinput"/>
                 </div>
                 <div className="labeldiv">
                     <label>Input # of shares per buy</label>
-                </div>
-                <div className="inputdiv">
                     <input id="sharesinput"/>
                 </div>
                 <div className="labeldiv">
                     <label>Input Start Date</label>
-                </div>
-                <div className="inputdiv">
                     <DatePicker wrapperClassName="datePicker" selected={startDate} onChange={handleDateChange} />
                 </div>
-                <div className="buttondiv">
+                <div className="labeldiv">
                     <button className="shake">Run App</button>
                 </div>
+                
             </form>
             </div>
         </div>
